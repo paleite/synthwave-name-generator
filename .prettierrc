@@ -1,0 +1,17 @@
+{
+  "bracketSpacing": false,
+  "singleQuote": true,
+  "semi": false,
+  "overrides": [
+    {
+      "files": [
+        ".babelrc",
+        ".lintstagedrc",
+        ".postcssrc",
+        ".prettierrc",
+        ".sassrc"
+      ],
+      "options": {"parser": "json"}
+    }
+  ]
+}

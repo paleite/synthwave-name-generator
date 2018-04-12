@@ -1,0 +1,8 @@
+{
+  "ignore": ["docs"],
+  "linters": {
+    "*.js": ["npx prettier-eslint --write", "npx eslint", "git add"],
+    "*.scss": ["npx prettier-stylelint --write", "npx stylelint", "git add"],
+    "{,.}*{rc,.json}": ["npx prettier-eslint --write", "git add"]
+  }
+}

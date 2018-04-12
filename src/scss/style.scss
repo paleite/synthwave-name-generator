@@ -1,0 +1,96 @@
+@import 'node_modules/normalize-scss/sass/normalize/import-now';
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: 'Orbitron', system-ui, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: #2d0123;
+  text-align: right;
+  color: #2d0123;
+  font-size: 3rem;
+}
+
+.wrapper {
+  display: inline-block;
+  height: 100%;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  // min-height: 100%;
+
+  &__suggestion {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 100%;
+    box-shadow: 0 0 40px #ff019c;
+    background-image: linear-gradient(to bottom, #dad536, #d02f89);
+    padding: 40px;
+    text-shadow: 0 0 20px #ff019c;
+    white-space: pre;
+  }
+}
+
+.container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  animation: bgperspective 11s ease-in-out infinite alternate;
+}
+
+$footer-height: 40vh;
+.footer {
+  position: absolute;
+  bottom: 0;
+  transform: rotateX(45deg) translateY(50%);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABR0lEQVR4AWKgCrgMaL8OMBwG4iiM23Y12AqFBgUFiS0IoAdoqgigB+gVQmxgC5Ar9Bi9YfbDQwFL/pTxym8YMyPzWdu20wcWWGGNLUqc0GFCp3mp9bX2c47zb3s5xCEOcYhDHOIQhzjEIQ5xSMAlgixfQgpUaF5DNK+0rhDORTyfYRFgiU9kyP8ZkiPTueXsOzCsgmT4wgY7HHBBr5Be84PWN9qfhTyfYR0k1+UK7FGjxaCQQfNa64X25yHPZ9gGKGSnS37jiCvuCrlrftT6XvsL2c7CUAao5IBalz3jhlEho+ZnrdfaX0k5C8MpQCMXtLjq0j94KOSh+U3rrfY3cpqFoQvUY8AvRl3+qZCn5qPWB+3vQjBMSUjpL5LM/0gy71rJfI4k88mezHetZL79JvF7xD91HeIQhzjEIe96OcQhDnGIQxzyB9XPMdV1xfZHAAAAAElFTkSuQmCC);
+  width: 100%;
+  height: $footer-height * 1.25;
+  animation: bgmove 17s ease-in-out infinite alternate,
+    bgcolor 7s linear infinite alternate;
+}
+
+@keyframes bgmove {
+  from {
+    background-position: 100% -3000%;
+    height: $footer-height * 1.5;
+  }
+  to {
+    background-position: 0% 0%;
+    height: $footer-height;
+  }
+}
+
+@keyframes bgperspective {
+  from {
+    perspective: $footer-height;
+  }
+  to {
+    perspective: $footer-height * 2.5;
+  }
+}
+
+@keyframes bgcolor {
+  0% {
+    background-color: #40284b;
+  }
+  100% {
+    background-color: #405684;
+  }
+}
