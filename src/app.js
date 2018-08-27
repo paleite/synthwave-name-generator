@@ -7,7 +7,7 @@ webfontloader.load({google: {families: ['Orbitron:900']}, active: main})
  * Main function - This is where the suggestions are built
  * @return {undefined}
  */
-function main () {
+function main() {
   const suggestionsCount = 1
   const suggestions = document.querySelector('.suggestions')
   const uniqueWords = [
