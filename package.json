@@ -9,7 +9,7 @@
     "serve": "npx parcel serve src/index.pug",
     "lint": "npx eslint --fix src/*.js; npx stylelint --fix src/scss/*.scss",
     "prettier": "npx prettier --write src/{,**/}*.{js,json} src/scss/*.scss",
-    "dist": "npx rimraf docs/; yarn run build",
+    "dist": "npx rimraf docs/; NODE_ENV=production yarn run build",
     "precommit": "lint-staged"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "wordpos": "^1.1.6"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "eslint": "^5.4.0",
     "fs-promise": "^2.0.3",
     "glob-promise": "^3.4.0",
     "husky": "^0.14.3",
