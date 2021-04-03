@@ -12,4 +12,3 @@ jobs:
         with:
           target: minor
           github-token: ${{ secrets.mytoken }}
-The action will only merge PRs whose checks (CI/CD) pass.
